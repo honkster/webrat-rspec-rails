@@ -3,7 +3,7 @@ module ActionController::Integration::Runner
   def method_missing(sym, *args, &block)
     reset! unless @integration_session
     if @integration_session.respond_to?(sym)
-      returning @integration_session.__send__(sym, *args, &block) do
+      @integration_session.__send__(sym, *args, &block).tap do
         copy_session_variables!
       end
     else
