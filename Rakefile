@@ -18,7 +18,7 @@ end
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |s|
-    s.name = "webrat-rspec-rails"
+    s.name = "honkster-webrat-rspec-rails"
     s.summary = "Webrat + rspec/rails integration"
     s.email = "brian@pivotallabs.com"
     s.homepage = "http://pivotallabs.com"
